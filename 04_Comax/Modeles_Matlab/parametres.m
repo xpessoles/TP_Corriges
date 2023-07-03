@@ -1,3 +1,5 @@
+%% COMAX %%
+
 % Paramètres du moteur
 Rm = 0.299      ; % Ohm
 Lm = 0.0824e-3  ; % Henry
