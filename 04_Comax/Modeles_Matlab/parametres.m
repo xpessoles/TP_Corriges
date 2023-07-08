@@ -12,14 +12,19 @@ J = 142                ; % g.cm²
 J = 142/1000/100/100   ; % kg.m²
 f = 0                  ;
 
-% Correcteur vitesse
+% Correcteur position
 KP_EPOS = 2420;
 KI_EPOS = 8340;
 KD_EPOS = 3230;
 
 % Correcteur courant
 Kii_EPOS = 200;
-Kip_EPOS = 3150;
+Kip_EPOS = 75;
+
+% Correcteur vitesse
+KPv_EPOS = 3150;
+KIv_EPOS = 200;
+
 
 
 
@@ -27,7 +32,7 @@ Kip_EPOS = 3150;
 kr = 1/15.88        ; % Réducteur
 r = (104e-3)/2/pi   ; % axe linéaire m/rad
 rkr = kr*r          ; % transmission moteur >> translation m/rad
-M_axe = 3.4         ; % Masse de l'axe
+M_axe = 3.4         ; % Masse de l'axe Redéfini à la fin !
 nm = 3              ; % Nombre de masse
 M_m = 1             ; % Masses 
 
@@ -42,6 +47,7 @@ vmax = vmax*2*pi/60; % rad/s
 
 
 % Trapeze
+tr = 0.14           ; % s : temps de retare
 L = 300             ; % mm distance à parcourir
 am = 300/1000 /rkr       ; % angle moteur an radian correspondant
 % Temps d'accélération : 
@@ -53,3 +59,13 @@ tvc = avc/vmax          ;
 
 t2 = t1+tvc             ;
 t3 = tvc+2*t1           ;
+
+%% Masses et frottement
+% Le comax commmence à monter à 2700 mA
+% Il ne retient plus le poids à 1100 mA. 
+% Masse de l'axe en mesurant
+M_axe = 5.59            ; %kg Mesure
+F_frottement = 32.1     ; %N Mesure
+
+% Dand la doc AXE : : 1.6 kh + (course = 0.6m)x0.6 kk/m = 4kg
+% Poignée : Masse Solidworks 680 g
