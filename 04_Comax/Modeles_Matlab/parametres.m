@@ -25,6 +25,7 @@ Kip_EPOS = 75;
 KPv_EPOS = 3150;
 KIv_EPOS = 200;
 
+Isat = 7.5      ;%A
 
 
 
