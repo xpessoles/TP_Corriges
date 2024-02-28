@@ -4,11 +4,11 @@
 kr = 1/15.88        ; % Réducteur
 r = (104e-3)/2/pi   ; % axe linéaire m/rad
 rkr = kr*r          ; % transmission moteur >> translation m/rad
-M_axe = 5.59         ; % Masse de l'axe Redéfini à la fin !
-nm = 3              ; % Nombre de masse
+M_axe = 5.59        ; % Masse de l'axe Redéfini à la fin !
+nm = 0              ; % Nombre de masse
 M_m = 1             ; % Masses 
-Mtot = M_axe + nm*M_m
-g = 9.81
+Mtot = M_axe + nm*M_m;
+g = 9.81            ;
 
 % Paramètres du moteur
 Rm = 0.299      ; % Ohm
@@ -21,7 +21,7 @@ Kem = 1/317            ; %V/(tr/min)
 J = 142                ; % g.cm²
 J = 142/1000/100/100   ; % kg.m²
 f = 0                  ;
-Jeq = J + (M_axe+nm*M_m)*rkr*rkr 
+Jeq = J + (M_axe+nm*M_m)*rkr*rkr ;
 
 
 % Correcteur position
@@ -34,11 +34,11 @@ Kii_EPOS = 75;
 Kip_EPOS = 200;
 
 % Correcteur vitesse
-KPv_EPOS = 3150;
-KIv_EPOS = 200;
+KPv_EPOS = 2150;
+KIv_EPOS = 90;
 
 Isat = 7.5      ;%A
-
+Usat = 19.4     ;%V
 
 
 
