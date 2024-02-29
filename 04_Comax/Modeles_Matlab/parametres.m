@@ -23,19 +23,18 @@ J = 142/1000/100/100   ; % kg.m²
 f = 0                  ;
 Jeq = J + (M_axe+nm*M_m)*rkr*rkr ;
 
-
 % Correcteur position
 KP_EPOS = 2420;
 KI_EPOS = 8340;
 KD_EPOS = 3230;
 
 % Correcteur courant
-Kii_EPOS = 75;
 Kip_EPOS = 200;
+Kii_EPOS = 75;
 
 % Correcteur vitesse
-KPv_EPOS = 2150;
-KIv_EPOS = 90;
+KPv_EPOS = 3150;
+KIv_EPOS = 200;
 
 Isat = 7.5      ;%A
 Usat = 19.4     ;%V
