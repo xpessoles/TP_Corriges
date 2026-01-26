@@ -1,0 +1,7 @@
+En phase de montée : 
+ * est-ce qu'il y a une accélération max qui fait décoller les masses au démarrage
+ * est-ce qu'il y a une déclération max qui fait décoller les masses au freinage
+
+En phase de descente : 
+ * est-ce qu'il y a une accélération qui fait décoller les masses au démarrage :
+	>> j'imagine que oui, si la l'accélération est supérieure à l'accélération de la pesanteur
